@@ -5,58 +5,58 @@ namespace Vayes\Auth;
 class User
 {
     /** @var string */
-    private $id;
+    protected $id;
 
     /** @var string */
-    private $first_name;
+    protected $first_name;
 
     /** @var string */
-    private $last_name;
+    protected $last_name;
 
     /** @var string */
-    private $full_name;
+    protected $full_name;
 
     /** @var string */
-    private $username;
+    protected $username;
 
     /** @var int */
-    private $gender = 0;
+    protected $gender = 0;
 
     /** @var string */
-    private $email;
+    protected $email;
 
     /** @var string */
-    private $password;
+    protected $password;
 
     /** @var int */
-    private $role;
+    protected $role;
 
     /** @var bool */
-    private $active = false;
+    protected $active = false;
 
     /** @var bool */
-    private $verified = false;
+    protected $verified = false;
 
     /** @var string|null */
-    private $remember_token;
+    protected $remember_token;
 
     /** @var string */
-    private $created_at;
+    protected $created_at;
 
     /** @var int */
-    private $created_by;
+    protected $created_by;
 
     /** @var string */
-    private $updated_at;
+    protected $updated_at;
 
     /** @var int */
-    private $updated_by;
+    protected $updated_by;
 
     /** @var string */
-    private $deleted_at;
+    protected $deleted_at;
 
     /** @var int */
-    private $deleted_by;
+    protected $deleted_by;
 
     public function __construct($autoAssignUuid = false)
     {
