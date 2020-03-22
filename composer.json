@@ -1,0 +1,24 @@
+{
+    "name": "vayes/auth",
+    "type": "library",
+    "description": "Provides abstraction for authentication and authorization.",
+    "keywords": [],
+    "homepage": "https://vayes.com.tr",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Yahya Erturan",
+          "email": "yahya@erturan.com.tr"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "symfony/polyfill-uuid": "^1.14"
+    },
+    "autoload": {
+        "psr-4": { "Vayes\\Auth\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}
