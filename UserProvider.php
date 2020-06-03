@@ -25,8 +25,8 @@ class UserProvider implements UserProviderInterface
     /** @var bool */
     private $active;
 
-    /** @var bool */
-    private $verified;
+    /** @var string */
+    private $verified_at;
 
     /** @var string */
     private $created_at;
@@ -50,7 +50,7 @@ class UserProvider implements UserProviderInterface
             ->setEmail($user->getEmail())
             ->setRole($user->getRole())
             ->setActive($user->isActive())
-            ->setVerified($user->isVerified())
+            ->setVerifiedAt($user->getVerifiedAt())
             ->setCreatedAt($user->getCreatedAt())
             ->setUpdatedAt($user->getUpdatedAt())
             ->setFullyAuthenticated($fullyAuthenticated)
@@ -184,20 +184,20 @@ class UserProvider implements UserProviderInterface
     }
 
     /**
-     * @return bool|null
+     * @return string
      */
-    public function getVerified(): ?bool
+    public function getVerifiedAt(): ?string
     {
-        return $this->verified;
+        return $this->verified_at;
     }
 
     /**
-     * @param bool|null $verified
+     * @param string|null $verified_at
      * @return $this
      */
-    public function setVerified(?bool $verified): self
+    public function setVerifiedAt(?string $verified_at): self
     {
-        $this->verified = $verified;
+        $this->verified_at = $verified_at;
         return $this;
     }
 

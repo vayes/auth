@@ -34,8 +34,8 @@ class User
     /** @var bool */
     protected $active = false;
 
-    /** @var bool */
-    protected $verified = false;
+    /** @var string */
+    protected $verified_at;
 
     /** @var string|null */
     protected $remember_token;
@@ -207,18 +207,18 @@ class User
         return $this;
     }
 
-    public function isVerified(): bool
+    public function getVerifiedAt(): ?string
     {
-        return $this->verified;
+        return $this->verified_at;
     }
 
     /**
-     * @param bool $verified
+     * @param string|null $verified_at
      * @return $this
      */
-    public function setVerified(bool $verified): self
+    public function setVerifiedAt(?string $verified_at): self
     {
-        $this->verified = $verified;
+        $this->verified_at = $verified_at;
         return $this;
     }
 
